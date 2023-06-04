@@ -1,18 +1,9 @@
 const express = require("express");
+const route = require("./routes");
 
 const app = express();
 
-app.get("/", (req, res) => {
-  return res.json({
-    message: "Mianya hebat",
-  });
-});
-
-app.get("/api/news", (req, res) => {
-  return res.json({
-    message: "api news",
-  });
-});
+app.use(route);
 
 app.listen(3030, () => {
   console.log("server running...");
