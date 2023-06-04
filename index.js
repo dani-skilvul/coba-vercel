@@ -8,6 +8,12 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/api/news", (req, res) => {
+  return res.json({
+    message: "api news",
+  });
+});
+
 app.listen(3030, () => {
   console.log("server running...");
 });
